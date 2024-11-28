@@ -53,5 +53,25 @@ Para ejecutar el análisis de datos, asegúrate de contar con los siguientes rec
 Instala las bibliotecas requeridas mediante `pip`:
 ```bash
 pip install pandas matplotlib seaborn
+# Importar bibliotecas
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Cargar el archivo CSV
+archivo_csv = "aguacusco.csv"
+datos = pd.read_csv(archivo_csv)
+
+# Descripción de los datos
+print("Resumen de los datos:")
+print(datos.info())
+
+# Visualización básica
+sns.lineplot(data=datos, x="Año de Medición", y="Cobertura de Agua Potable (%)", hue="Nombre de la Localidad")
+plt.title("Cobertura de Agua Potable en el Departamento de Cusco (2016-2019)")
+plt.xlabel("Año")
+plt.ylabel("Cobertura (%)")
+plt.show()
+
 
 
