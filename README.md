@@ -3,18 +3,18 @@
 
 ---
 
-## **Descripción del Proyecto**  
-Este proyecto analiza los indicadores de calidad de suministro eléctrico de las empresas de distribución eléctrica a nivel nacional, con énfasis en los índices **SAIDI** y **SAIFI**, los cuales evalúan la duración y frecuencia promedio de interrupciones en el sistema por usuario.  
-
-El objetivo es proporcionar información valiosa para monitorear el desempeño de las empresas de distribución eléctrica y apoyar la toma de decisiones regulatorias y operativas.  
-
----
-
 ## **Integrantes del Proyecto**  
 - **200341** Elbert César Sánchez Chacón  
 - **183485** José Antonio Sullca Aquino  
 - **141002** Wilfredo Chino Choquenaira  
 - **154628** César Aparicio Condori Huaychay  
+
+---
+
+## **Descripción del Proyecto**  
+Este proyecto analiza los indicadores de calidad de suministro eléctrico de las empresas de distribución eléctrica a nivel nacional, con énfasis en los índices **SAIDI** y **SAIFI**, los cuales evalúan la duración y frecuencia promedio de interrupciones en el sistema por usuario.  
+
+El objetivo es proporcionar información valiosa para monitorear el desempeño de las empresas de distribución eléctrica y apoyar la toma de decisiones regulatorias y operativas.  
 
 ---
 
