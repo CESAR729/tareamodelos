@@ -1,24 +1,26 @@
 # Importar las librerías necesarias
-from sklearn.datasets import make_regression
 import pandas as pd
 import numpy as np
 import plotly.express as px
-import plotly.graph_objects as go
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 
-# Generar datos de regresión
-X, y = make_regression(n_samples=100, n_features=2, n_informative=2, n_targets=1, noise=50)
-
-# Crear un DataFrame con los datos
-df = pd.DataFrame({'feature1': X[:, 0], 'feature2': X[:, 1], 'target': y})
+# Cargar el dataset desde el repositorio de GitHub
+file_path ="wine.csv"
+df = pd.read_csv(url)
 
 # Mostrar las primeras filas del DataFrame
 print(df.head())
 
-# Crear un gráfico 3D con Plotly
-fig = px.scatter_3d(df, x='feature1', y='feature2', z='target')
+# Seleccionar características y objetivo
+# Supongamos que usamos 'volatile acidity' y 'citric acid' como características
+# y 'quality' como objetivo (puedes ajustar las columnas según lo que necesites)
+X = df[['volatile acidity', 'citric acid']].values
+y = df['quality'].values
+
+# Crear un gráfico 3D con Plotly (si los datos lo permiten)
+fig = px.scatter_3d(df, x='volatile acidity', y='citric acid', z='quality', title="Scatter 3D: Wine Quality")
 fig.show()
 
 # Dividir los datos en conjuntos de entrenamiento y prueba
