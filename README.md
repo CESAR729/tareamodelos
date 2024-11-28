@@ -23,16 +23,7 @@ Los resultados obtenidos buscan apoyar la **planificación estratégica**, el **
 
 ## Contenido del Proyecto
 ### **Archivo CSV**
-El conjunto de datos en formato CSV incluye las siguientes columnas clave:
-1. **Nombre de la Localidad**: Comunidad o área atendida.
-2. **Cobertura de Agua Potable (%)**: Porcentaje de la población con acceso al servicio.
-3. **Año de Medición**: Período en el que se registraron los datos (2016-2019).
-4. **Población Total**: Cantidad de habitantes en la localidad.
-5. **Usuarios Atendidos**: Número de personas con acceso al servicio de agua potable.
-6. **Volumen Total Distribuido (m³)**: Cantidad total de agua suministrada.
-7. **Interrupciones en el Servicio**: Número de eventos de interrupción del suministro.
-8. **Duración de las Interrupciones (horas)**: Tiempo acumulado de interrupciones en el servicio.
-
+archivo.csv
 ### **Análisis y Visualización**
 El análisis incluye:
 - **Tendencias temporales** en los indicadores de cobertura.
