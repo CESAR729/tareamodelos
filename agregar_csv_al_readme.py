@@ -1,16 +1,21 @@
 import pandas as pd
 
-# Nombre del archivo CSV (asegúrate de que 'Suministros.csv' esté en el mismo directorio del script)
+# Nombre del archivo CSV
 csv_file = 'Suministros.csv'
 
-# Carga el archivo CSV
+# Carga del archivo CSV
 try:
-    df = pd.read_csv(csv_file, sep=';')  # Cambia 'sep' si tu archivo tiene otro delimitador
+    df = pd.read_csv(csv_file, sep=';')  # Ajusta el delimitador si es necesario
 except FileNotFoundError:
-    print(f"Error: El archivo '{csv_file}' no se encontró. Verifica que esté en el directorio actual.")
+    print(f"Error: El archivo '{csv_file}' no se encontró. Verifica la ruta.")
     exit()
 except Exception as e:
     print(f"Error al leer el archivo CSV: {e}")
+    exit()
+
+# Verifica si el DataFrame tiene datos
+if df.empty:
+    print("Error: El archivo CSV está vacío o no contiene datos válidos.")
     exit()
 
 # Convierte el DataFrame a una tabla Markdown
@@ -24,12 +29,12 @@ except Exception as e:
     print(f"Error al convertir el DataFrame a Markdown: {e}")
     exit()
 
-# Guarda la tabla Markdown en el archivo README.md
+# Escribe la tabla Markdown en el archivo README.md
 try:
-    with open('README.md', 'a', encoding='utf-8') as f:  # Modo 'a' para agregar al final del archivo existente
-        f.write("\n## Contenido del archivo CSV\n\n")  # Agrega un título para la tabla
+    with open('README.md', 'a', encoding='utf-8') as f:  # Modo 'a' para agregar contenido
+        f.write("\n## Contenido del archivo CSV\n\n")  # Título en Markdown
         f.write(markdown_table + "\n")
-    print("Contenido del archivo CSV agregado al README.md")
+    print("Contenido del archivo CSV agregado correctamente a README.md")
 except Exception as e:
     print(f"Error al escribir en el archivo README.md: {e}")
     exit()
