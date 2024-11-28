@@ -1,0 +1,40 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import make_classification
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression, SGDClassifier, Perceptron
+from sklearn.metrics import accuracy_score
+
+# Crear un conjunto de datos de ejemplo (clasificación binaria)
+X, y = make_classification(n_samples=1000, n_features=2, n_informative=2, n_redundant=0, random_state=42)
+
+# Dividir los datos en entrenamiento y prueba
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Modelos a explorar (eliminamos BayesianRidge, que es para regresión)
+models = {
+    'Regresión Logística': LogisticRegression(),
+    'Descenso de Gradiente Estocástico (SGD)': SGDClassifier(),
+    'Perceptron': Perceptron()
+}
+
+# Almacenar las precisiones de los modelos
+results = {}
+
+# Entrenar y evaluar cada modelo
+for model_name, model in models.items():
+    model.fit(X_train, y_train)  # Entrenamiento del modelo
+    y_pred = model.predict(X_test)  # Predicciones sobre el conjunto de prueba
+    accuracy = accuracy_score(y_test, y_pred)  # Calcular la precisión
+    results[model_name] = accuracy  # Guardar el resultado
+
+# Imprimir los resultados
+for model_name, accuracy in results.items():
+    print(f"{model_name} - Precisión: {accuracy:.4f}")
+    
+# Opcional: Visualización de los resultados (gráfico de barras)
+plt.bar(results.keys(), results.values())
+plt.xlabel('Modelos')
+plt.ylabel('Precisión')
+plt.title('Precisión de Modelos de Clasificación')
+plt.show()

@@ -6,21 +6,23 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 
-# Cargar el dataset desde el repositorio de GitHub
-file_path ="wine.csv"
-df = pd.read_csv(url)
+# Cargar el dataset desde la ruta local
+file_path = "wine.csv"  # Especificar la ruta del archivo CSV
+df = pd.read_csv(file_path)  # Usar 'file_path' en lugar de 'url'
 
 # Mostrar las primeras filas del DataFrame
 print(df.head())
 
+# Imprimir los nombres de las columnas
+print("Nombres de las columnas:", df.columns)
+
 # Seleccionar características y objetivo
-# Supongamos que usamos 'volatile acidity' y 'citric acid' como características
-# y 'quality' como objetivo (puedes ajustar las columnas según lo que necesites)
-X = df[['volatile acidity', 'citric acid']].values
-y = df['quality'].values
+# Asegúrate de que las columnas que vas a usar existen
+X = df[['Alcohol', 'Malic.acid']].values  # Ajusta las columnas según lo que necesites
+y = df['Quality'].values  # Ajusta el nombre del objetivo si es necesario
 
 # Crear un gráfico 3D con Plotly (si los datos lo permiten)
-fig = px.scatter_3d(df, x='volatile acidity', y='citric acid', z='quality', title="Scatter 3D: Wine Quality")
+fig = px.scatter_3d(df, x='Alcohol', y='Malic.acid', z='Quality', title="Scatter 3D: Wine Quality")
 fig.show()
 
 # Dividir los datos en conjuntos de entrenamiento y prueba
