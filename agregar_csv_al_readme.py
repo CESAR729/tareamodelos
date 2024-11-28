@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Nombre del archivo CSV
-csv_file = 'Suministros.csv'
+csv_file = 'aguacusco.csv'
 
 # Carga del archivo CSV
 try:
