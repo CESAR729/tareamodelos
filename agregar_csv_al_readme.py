@@ -1,11 +1,13 @@
 import pandas as pd
 
-# Carga el archivo CSV con el delimitador adecuado (puedes cambiar ';' si es diferente)
-csv_file = 'Suministros.csv'  # Cambia por la ruta de tu archivo CSV
+# Nombre del archivo CSV (asegúrate de que 'Suministros.csv' esté en el mismo directorio del script)
+csv_file = 'Suministros.csv'
+
+# Carga el archivo CSV
 try:
-    df = pd.read_csv(csv_file, sep=';')  # Cambia 'sep' según el delimitador de tu archivo
+    df = pd.read_csv(csv_file, sep=';')  # Cambia 'sep' si tu archivo tiene otro delimitador
 except FileNotFoundError:
-    print(f"Error: El archivo '{csv_file}' no se encontró. Verifica la ruta.")
+    print(f"Error: El archivo '{csv_file}' no se encontró. Verifica que esté en el directorio actual.")
     exit()
 except Exception as e:
     print(f"Error al leer el archivo CSV: {e}")
