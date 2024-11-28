@@ -4,10 +4,10 @@
 ---
 
 ## **Integrantes del Proyecto**  
-- **200341** Elbert César Sánchez Chacón  
-- **183485** José Antonio Sullca Aquino  
-- **141002** Wilfredo Chino Choquenaira  
-- **154628** César Aparicio Condori Huaychay  
+-  Elbert César Sánchez Chacón   **200341** 
+- José Antonio Sullca Aquino     **183485** 
+-  Wilfredo Chino Choquenaira    **141002**
+-  César Condori Huaychay        **154628** 
 
 ---
 
