@@ -1,43 +1,29 @@
-# Procesamiento del archivo CSV
+# Procesamiento del archivo CSV desde GitHub
 import pandas as pd
+from tabulate import tabulate
 
-# Nombre del archivo CSV
-csv_file = 'Suministros.csv'
+# URL del archivo CSV en GitHub
+csv_url = 'https://raw.githubusercontent.com/CESAR729/tareamodelos/main/Suministros.csv'
 
-# Carga del archivo CSV
 try:
-    df = pd.read_csv(csv_file, sep=';')  # Ajusta el delimitador si es necesario
-except FileNotFoundError:
-    print(f"Error: El archivo '{csv_file}' no se encontró. Verifica la ruta.")
-    exit()
+    # Cargar el archivo CSV desde la URL
+    df = pd.read_csv(csv_url, sep=';')
+    if df.empty:
+        print("Error: El archivo CSV está vacío o no contiene datos válidos.")
+        exit()
 except Exception as e:
-    print(f"Error al leer el archivo CSV: {e}")
+    print(f"Error al leer el archivo CSV desde GitHub: {e}")
     exit()
 
-# Verifica si el DataFrame tiene datos
-if df.empty:
-    print("Error: El archivo CSV está vacío o no contiene datos válidos.")
-    exit()
-
-# Convierte el DataFrame a una tabla Markdown
 try:
-    from tabulate import tabulate
+    # Convertir el DataFrame a Markdown
     markdown_table = tabulate(df, headers='keys', tablefmt='pipe', showindex=False)
-except ImportError:
-    print("Error: La biblioteca 'tabulate' no está instalada. Instálala con: pip install tabulate")
-    exit()
-except Exception as e:
-    print(f"Error al convertir el DataFrame a Markdown: {e}")
-    exit()
-
-# Escribe la tabla Markdown en el archivo README.md
-try:
-    with open('README.md', 'a', encoding='utf-8') as f:  # Modo 'a' para agregar contenido
-        f.write("\n## Contenido del archivo CSV\n\n")  # Título en Markdown
+    with open('README.md', 'a', encoding='utf-8') as f:
+        f.write("\n## Contenido del archivo CSV\n\n")
         f.write(markdown_table + "\n")
     print("Contenido del archivo CSV agregado correctamente a README.md")
 except Exception as e:
-    print(f"Error al escribir en el archivo README.md: {e}")
+    print(f"Error al procesar el archivo CSV: {e}")
     exit()
 
 # Clasificación usando el dataset Iris
@@ -47,29 +33,26 @@ from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
-# Cargar el dataset iris
 iris = load_iris()
-X = iris.data  # Características (sepal length, sepal width, petal length, petal width)
-y = iris.target  # Clases (0 = setosa, 1 = versicolor, 2 = virginica)
+X = iris.data
+y = iris.target
 
-# Dividir los datos en conjunto de entrenamiento y prueba
+# Dividir los datos
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
-# Crear y entrenar el modelo Naive Bayes
+# Entrenar el modelo Naive Bayes
 model = GaussianNB()
 model.fit(X_train, y_train)
-
-# Predicción en el conjunto de prueba
 y_pred = model.predict(X_test)
 
-# Evaluación del modelo
+# Evaluar el modelo
+print("\nResultados del modelo Naive Bayes:")
 print("Accuracy:", accuracy_score(y_test, y_pred))
 print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
 print("Classification Report:\n", classification_report(y_test, y_pred))
 
-# Clasificación de nuevos datos
-new_samples = [[5.1, 3.5, 1.4, 0.2],  # Ejemplo de setosa
-               [6.7, 3.0, 5.2, 2.3]]  # Ejemplo de virginica
+# Clasificar nuevos datos
+new_samples = [[5.1, 3.5, 1.4, 0.2], [6.7, 3.0, 5.2, 2.3]]
 predictions = model.predict(new_samples)
 
 for sample, pred in zip(new_samples, predictions):
