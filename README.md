@@ -1,6 +1,6 @@
-# Dataset Wine
+# Análisis y Visualización de Datos Químicos y Categóricos del Dataset *Wine*
 
-Este proyecto utiliza el conjunto de datos *Wine* de la biblioteca `sklearn` para análisis y visualización. Se incluyen los scripts necesarios para cargar, explorar y visualizar el conjunto de datos.
+Este proyecto tiene como objetivo analizar y visualizar el conjunto de datos *Wine* de la biblioteca `sklearn`. Se realiza un estudio detallado de las características químicas de los vinos y su clasificación en tres categorías distintas.
 
 ---
 
@@ -17,27 +17,34 @@ Este proyecto utiliza el conjunto de datos *Wine* de la biblioteca `sklearn` par
 
 ## Objetivo del Proyecto
 
-El objetivo de este proyecto es analizar el conjunto de datos *Wine* mediante herramientas de Python, permitiendo explorar sus características y estructura para un mejor entendimiento de su composición.
+Analizar las características químicas y cualitativas de diferentes tipos de vino mediante herramientas de Python. Este análisis incluye la visualización inicial del dataset, exploración de las relaciones entre las variables, y una mejor comprensión de su estructura.
 
 ---
 
-## Dataset: *Wine*
+## Descripción del Dataset
 
-El conjunto de datos *Wine* contiene información química y cualitativa sobre diferentes tipos de vino. Cada muestra está clasificada en una de tres categorías (`class`). Los datos incluyen las siguientes características:
+El conjunto de datos *Wine* proviene de la biblioteca `sklearn` y contiene información sobre vinos clasificados en tres categorías. Cada vino está descrito mediante 13 características químicas y una categoría (`class`). A continuación, se definen las características incluidas:
 
-- **Alcohol**
-- **Malic acid**
-- **Ash**
-- **Alcalinity of ash**
-- **Magnesium**
-- **Total phenols**
-- **Flavanoids**
-- **Nonflavanoid phenols**
-- **Proanthocyanins**
-- **Color intensity**
-- **Hue**
-- **OD280/OD315 of diluted wines**
-- **Proline**
+### Características Químicas:
+- **Alcohol**: Porcentaje de alcohol presente en el vino.
+- **Malic acid**: Cantidad de ácido málico (componente orgánico).
+- **Ash**: Contenido de cenizas del vino.
+- **Alcalinity of ash**: Alcalinidad medida en las cenizas.
+- **Magnesium**: Nivel de magnesio (mg/L).
+- **Total phenols**: Cantidad total de compuestos fenólicos.
+- **Flavanoids**: Subgrupo de compuestos fenólicos que afectan el sabor.
+- **Nonflavanoid phenols**: Fenoles no flavonoides presentes.
+- **Proanthocyanins**: Componentes responsables del color del vino.
+- **Color intensity**: Intensidad del color del vino.
+- **Hue**: Tono del color del vino.
+- **OD280/OD315 of diluted wines**: Relación de absorbancia, indicando calidad.
+- **Proline**: Cantidad de prolina, un aminoácido.
+
+### Variable de Categoría:
+- **Class**: Clasificación del vino en tres tipos diferentes, identificados como:
+  - Clase 0
+  - Clase 1
+  - Clase 2
 
 ---
 
@@ -45,7 +52,7 @@ El conjunto de datos *Wine* contiene información química y cualitativa sobre d
 
 ### Visualizar las primeras filas del conjunto de datos
 
-El script permite cargar el conjunto de datos y mostrar las primeras filas para obtener una visión general de la estructura de los datos.
+Este script permite cargar y visualizar las primeras cinco filas del dataset para entender su estructura básica.
 
 #### Código:
 
