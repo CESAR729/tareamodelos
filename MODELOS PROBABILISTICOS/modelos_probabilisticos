@@ -48,4 +48,9 @@ plt.xlabel("Clases")
 plt.ylabel("Frecuencia")
 plt.title("Distribución de Predicciones vs Valores Reales")
 plt.legend()
+
+# Guardar la gráfica en el repositorio
+output_path = "Distribucion_Predicciones_vs_Valores_Reales.png"
+plt.savefig(output_path)  # Guardar la gráfica en el archivo
+print(f"Gráfica guardada como {output_path}")
 plt.show()
