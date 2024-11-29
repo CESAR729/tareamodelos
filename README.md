@@ -1,24 +1,34 @@
-import pandas as pd
-import matplotlib.pyplot as plt
-from pandas.plotting import table
+# Indicadores de Cobertura en el Servicio de Agua Potable en el Departamento de Cusco (2016 - 2019)
 
-# Cargar el archivo CSV
-csv_file = "archivo.csv"  # Cambia esto por la ruta a tu archivo .csv
-df = pd.read_csv(csv_file)
+## Descripción del Proyecto
+Este proyecto analiza los indicadores clave de cobertura del servicio de agua potable en el Departamento de Cusco durante el período 2016-2019. A través de técnicas de análisis de datos y visualización, se busca identificar patrones, tendencias y posibles brechas en la provisión de este servicio esencial. El objetivo principal es generar información que permita mejorar la gestión y planificación de recursos en el sector de agua potable, beneficiando a las comunidades locales.
 
-# Crear una figura para la tabla
-fig, ax = plt.subplots(figsize=(10, 5))  # Ajusta el tamaño de la imagen
-ax.axis('off')  # Oculta los ejes
+## Autor
+**César Condori Huaychay**  
+Estudiante de Ingeniería Informática y de Sistemas  
+Universidad Nacional de San Antonio Abad del Cusco (UNSAAC)
 
-# Crear la tabla
-tabla = table(ax, df, loc='center', colWidths=[0.2] * len(df.columns))  # Ajusta el ancho de columnas
-tabla.auto_set_font_size(False)
-tabla.set_fontsize(12)
-tabla.scale(1.2, 1.2)  # Escala para mejorar legibilidad
+## Objetivos del Proyecto
+- Evaluar la evolución de los indicadores de cobertura de agua potable en el Departamento de Cusco.
+- Identificar las zonas con menor acceso al servicio y las posibles causas de esta brecha.
+- Proponer recomendaciones basadas en los hallazgos para mejorar la cobertura en los próximos años.
 
-# Guardar la tabla como imagen
-output_image = "tabla.png"  # Nombre de la imagen de salida
-plt.savefig(output_image, bbox_inches='tight', dpi=300)
-plt.close()
+## Metodología
+1. **Recopilación de Datos:**  
+   - Fuentes: INEI, SUNASS, y otras entidades relacionadas con el sector de agua potable.  
+   - Periodo: 2016-2019.  
 
-print(f"Imagen guardada como {output_image}")
+2. **Análisis de Datos:**  
+   - Procesamiento de los datos con Python y bibliotecas como Pandas y NumPy.  
+   - Visualización con Matplotlib y Seaborn para identificar tendencias.  
+
+3. **Elaboración de Indicadores:**  
+   - Porcentaje de población con acceso al agua potable.  
+   - Distribución geográfica del servicio.  
+   - Variaciones anuales en la cobertura.  
+
+4. **Generación de Reportes:**  
+   - Comparación entre provincias y distritos del Cusco.  
+   - Identificación de zonas críticas y áreas de mejora.  
+
+## Estructura del Repositorio
