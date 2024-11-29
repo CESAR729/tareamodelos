@@ -1,26 +1,38 @@
-# Casos de Anemia por Edades (2010-2020) en Cusco
+# **César Condori Huaychay**  
+**Estudiante de Ingeniería Informática y de Sistemas**  
+**Universidad Nacional de San Antonio Abad del Cusco (UNSAAC)**  
 
-## Descripción
+---
 
-Este proyecto analiza los casos de anemia reportados en la región de Cusco entre 2010 y 2020, desglosados por grupos etarios. Incluye visualización de datos, análisis de tendencias y predicción de casos futuros utilizando algoritmos de inteligencia artificial.
+# **Registros Electorales en Cusco (2010-2020)**
 
-## Características
-- Análisis de tendencias de anemia por edades.
-- Comparaciones entre diferentes grupos etarios.
-- Predicción de casos futuros utilizando aprendizaje automático.
-- Visualización geográfica interactiva.
+## **Descripción**
+Este proyecto analiza los registros electorales en la región de Cusco durante el período 2010-2020. Se enfoca en estudiar la evolución del padrón electoral, la segmentación demográfica y la proyección de tendencias futuras, utilizando herramientas avanzadas de análisis de datos e inteligencia artificial.
 
-## Estructura del Proyecto
-- `src/`: Código fuente.
-- `data/`: Conjunto de datos utilizados en el análisis.
-- `casos-de-uso/`: Documentación de los casos de uso.
-- `docs/`: Documentación adicional.
+## **Características Principales**
+- **Análisis Temporal:** Evaluación de tendencias en el crecimiento del padrón electoral durante la última década.  
+- **Segmentación Demográfica:** Comparación de registros según grupos poblacionales (jóvenes, adultos, adultos mayores) y distribución geográfica.  
+- **Predicción Basada en AI:** Aplicación de algoritmos de aprendizaje automático para modelar y proyectar comportamientos futuros.  
+- **Visualizaciones Interactivas:** Uso de mapas geográficos y gráficos dinámicos para una interpretación clara de los datos.  
+- **Análisis Geoespacial:** Evaluación de la distribución de registros electorales a nivel distrital y provincial.
 
-## Instalación
-1. Clona este repositorio:
+## **Estructura del Proyecto**
+El proyecto está organizado en las siguientes carpetas para facilitar su navegación y mantenimiento:
+
+- **`src/`:** Código fuente para análisis, modelado y visualización de datos.  
+- **`data/`:** Datos originales y preprocesados sobre los registros electorales.  
+- **`casos-de-uso/`:** Documentación detallada sobre las aplicaciones prácticas de los análisis.  
+- **`docs/`:** Documentación técnica y conceptual del proyecto.  
+- **`notebooks/`:** Notebooks interactivos para explorar y detallar los análisis realizados.  
+- **`output/`:** Resultados generados, como gráficos, tablas y reportes.  
+
+## **Instalación**
+Sigue los pasos a continuación para configurar y ejecutar el proyecto:
+
+1. Clona este repositorio:  
    ```bash
-   git clone https://github.com/tuusuario/Anemia-Cusco-2010-2020.git
-   cd Anemia-Cusco-2010-2020
+   git clone https://github.com/tuusuario/Registros-Electorales-Cusco.git
+   cd Registros-Electorales-Cusco
 
 ## Contenido del archivo CSV
 
