@@ -1,8 +1,8 @@
 import pandas as pd
 
-# Carga el archivo CSV con el delimitador adecuado (puedes cambiar ';' si es diferente)
-csv_file = 'animia.csv'  # Cambia por la ruta de tu archivo CSV
-df = pd.read_csv(csv_file, sep=';')
+# Carga el archivo CSV con el delimitador adecuado (puedes cambiar ',' si es diferente)
+csv_file = 'electores_cusco.csv'  # Cambia por la ruta de tu archivo CSV
+df = pd.read_csv(csv_file, sep=',')  # Asegúrate de ajustar el delimitador si es necesario
 
 # Convierte el DataFrame a una tabla Markdown
 try:
