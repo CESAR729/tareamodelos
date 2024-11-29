@@ -12,7 +12,7 @@ El modelo probabilístico basado en Kernel Density Estimation (KDE) alcanzó una
 - **Dataset:** [Nombre del dataset]
 
 ### Visualización de la Distribución (KDE)
-![Distribución KDE](kde_distribution.png)
+![Distribución KDE](mp.png)
 
 ---
 
