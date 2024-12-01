@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Carga el archivo CSV con el delimitador adecuado
-csv_file = 'Registro.csv'  # Archivo especificado
+csv_file = 'hipm_2023.csv'  # Archivo original que quieres usar
 df = pd.read_csv(csv_file, sep=';')
 
 # Convierte el DataFrame a una tabla Markdown
