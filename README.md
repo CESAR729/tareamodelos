@@ -8,7 +8,6 @@ Universidad Nacional de San Antonio Abad del Cusco (UNSAAC)
 ### Título del Proyecto
 **correspondiente a la Estrategia de asistencia para Abastecimiento de Agua Potable - “Plan Cisterna” – [Organismo Técnico de la Administración de los servicios de Saneamiento – OTASS] -**
 
-### Contenido de `agua.csv`
 
 
 ## Contenido del archivo CSV
