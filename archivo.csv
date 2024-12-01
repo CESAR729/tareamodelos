@@ -1,5 +1,0 @@
-import os
-if os.path.exists(csv_file):
-    print(f"El archivo {csv_file} existe.")
-else:
-    print(f"El archivo {csv_file} no se encuentra.")
