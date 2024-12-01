@@ -61,27 +61,6 @@ El dataset `agua.csv` puede ser utilizado en:
 
 ## Estructura del Archivo `agua.csv`
 
-El archivo tiene una estructura tabular con las siguientes columnas:
-
-| Columna                 | Descripción                                        |
-|-------------------------|----------------------------------------------------|
-| Nombre de la EPS        | Empresa responsable de la distribución             |
-| Departamento            | Región administrativa                              |
-| Provincia               | Provincia donde se realiza la actividad           |
-| Distrito                | Distrito específico                               |
-| Ubigeo                  | Código único de localización                      |
-| Coordenada Este         | Coordenada geográfica (longitud)                  |
-| Coordenada Norte        | Coordenada geográfica (latitud)                   |
-| Tipo de Servicio        | Tipo de actividad realizada                       |
-| Zona                    | Zona intervenida                                  |
-| Cantidad Distribuida    | Volumen de agua entregado (en m³)                 |
-| Viviendas Beneficiadas  | Número de viviendas atendidas                     |
-| Fecha de Corte          | Día de consolidación de la información            |
-| Año de Ejecución        | Año en que se realizó la actividad                |
-| Fecha de Registro       | Día de ingreso de los datos al sistema            |
-
----
-
 ## Créditos
 
 Este proyecto es desarrollado por el **Organismo Técnico de la Administración de los Servicios de Saneamiento – OTASS**, en colaboración con las **Empresas Prestadoras de Servicios (EPS)** participantes.
