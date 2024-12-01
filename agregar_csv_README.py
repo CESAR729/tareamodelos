@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Carga el archivo CSV con el delimitador adecuado (puedes cambiar ';' si es diferente)
-csv_file = 'agua.csv'  # Cambia por la ruta de tu archivo CSV
+csv_file = 'archivo.csv'  # Cambié el nombre del archivo CSV aquí
 df = pd.read_csv(csv_file, sep=';')
 
 # Convierte el DataFrame a una tabla Markdown
