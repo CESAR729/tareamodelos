@@ -1,7 +1,9 @@
 import pandas as pd
 
 # Lista de archivos CSV
-csv_files = ['ubigeo_departamento.csv', 'ubigeo_provincia.csv', 'ubigeo_distrito.csv']
+csv_files = ['/ruta/completa/ubigeo_departamento.csv',
+    '/ruta/completa/ubigeo_provincia.csv',
+    '/ruta/completa/ubigeo_distrito.csv']
 
 # Cargar los archivos CSV y agregar sus tablas al README.md
 try:
