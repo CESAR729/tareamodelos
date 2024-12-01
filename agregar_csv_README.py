@@ -2,7 +2,7 @@ import pandas as pd
 from tabulate import tabulate
 
 # Carga el archivo CSV con el delimitador adecuado (puedes cambiar ';' si es diferente)
-csv_file = '/ruta/del/archivo/archivo.csv'  # Actualiza con la ruta correcta
+csv_file = 'aguita.csv'  # Actualiza con la ruta correcta
 df = pd.read_csv(csv_file, sep=';')  # Ajusta el delimitador según el archivo (por ejemplo, ',' si es CSV estándar)
 
 # Convierte el DataFrame a una tabla Markdown
