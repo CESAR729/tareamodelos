@@ -1,33 +1,36 @@
+import os
 import pandas as pd
+from tabulate import tabulate
 
-# Lista de archivos CSV
-csv_files = ['/ruta/completa/ubigeo_departamento.csv',
-    '/ruta/completa/ubigeo_provincia.csv',
-    '/ruta/completa/ubigeo_distrito.csv']
-
-# Cargar los archivos CSV y agregar sus tablas al README.md
-try:
-    from tabulate import tabulate
-except ImportError:
-    raise ImportError("Por favor instala la biblioteca 'tabulate' con: pip install tabulate")
+# Lista de archivos CSV con las rutas correctas
+csv_files = [r'C:\Users\User\Documents\GitHub\tareamodelos\ubigeo_departamento.csv',
+             r'C:\Users\User\Documents\GitHub\tareamodelos\ubigeo_provincia.csv',
+             r'C:\Users\User\Documents\GitHub\tareamodelos\ubigeo_distrito.csv']
 
 # Ruta del archivo README.md
-readme_file = 'README.md'
+readme_file = r'C:\Users\User\Documents\GitHub\tareamodelos\README.md'
 
-with open(readme_file, 'a', encoding='utf-8') as f:  # Modo 'a' para agregar al archivo existente
-    for csv_file in csv_files:
-        try:
-            # Carga el archivo CSV (ajusta el delimitador si es necesario)
-            df = pd.read_csv(csv_file, sep=';')
-            
-            # Convierte el DataFrame a una tabla Markdown
-            markdown_table = tabulate(df, headers='keys', tablefmt='pipe', showindex=False)
-            
-            # Escribe la tabla en el README.md
+# Verificar si los archivos existen antes de procesarlos
+for csv_file in csv_files:
+    if not os.path.exists(csv_file):
+        print(f"Error: El archivo {csv_file} no existe en la ruta especificada.")
+        continue  # Saltar al siguiente archivo si no existe
+
+    try:
+        # Cargar el archivo CSV (ajusta el delimitador si es necesario)
+        df = pd.read_csv(csv_file, sep=';')
+
+        # Convierte el DataFrame a una tabla Markdown
+        markdown_table = tabulate(df, headers='keys', tablefmt='pipe', showindex=False)
+
+        # Escribe la tabla en el README.md
+        with open(readme_file, 'a', encoding='utf-8') as f:  # Modo 'a' para agregar al archivo existente
             f.write(f"\n## Contenido de {csv_file}\n\n")  # Título para cada tabla
             f.write(markdown_table + "\n")
-            print(f"Contenido de {csv_file} agregado al README.md")
-        except Exception as e:
-            print(f"Error al procesar {csv_file}: {e}")
+        
+        print(f"Contenido de {csv_file} agregado al README.md")
+
+    except Exception as e:
+        print(f"Error al procesar {csv_file}: {e}")
 
 print("Proceso completado.")
