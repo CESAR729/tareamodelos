@@ -1,31 +1,35 @@
-# Casos de Anemia por Edades entre los años 2010 - 2020 en la Región de Cusco
+# Estrategia de Asistencia para Abastecimiento de Agua Potable - “Plan Cisterna”
+**Organismo Técnico de la Administración de los Servicios de Saneamiento – OTASS**
 
-## Autor  
-**Nombre:** César Condori Huaychay  
-**Universidad:** UNSAAC  
+## Descripción
 
-## Introducción
-El problema de la anemia representa un desafío crítico para la salud pública, especialmente en regiones como Cusco, donde las tasas de incidencia son alarmantes en poblaciones vulnerables como niños y adolescentes. Este informe recopila los datos históricos de casos de anemia registrados entre los años 2010 y 2020, organizados por rangos de edad, con el objetivo de analizar tendencias y establecer estrategias de intervención.
+Este proyecto se basa en un consolidado de actividades de distribución de agua potable correspondiente a la **1ra Etapa de la Estrategia de Asistencia de Agua Potable por camión cisterna en zonas críticas**, bajo la coordinación del **Organismo Técnico de la Administración de los Servicios de Saneamiento (OTASS)** y en colaboración con la **Empresa Prestadora de Servicios (EPS)**.
 
-## Objetivos del Informe
-1. **Analizar la evolución de la anemia**: Observar las variaciones en los casos reportados durante el período 2010-2020.
-2. **Identificar poblaciones más vulnerables**: Determinar los rangos de edad con mayor incidencia de anemia.
-3. **Generar insumos para políticas públicas**: Proveer datos clave para diseñar estrategias que combatan la anemia en la región de Cusco.
+La actividad está enfocada en la distribución de agua potable en zonas vulnerables de la región, utilizando camiones cisterna para llevar el suministro a las poblaciones que no tienen acceso adecuado al agua potable.
 
-## Metodología
-Los datos han sido recopilados de reportes oficiales de instituciones de salud en la región. Cada caso se categoriza según el año, el rango de edad y el total reportado, con el fin de garantizar un análisis detallado y representativo.
+## Objetivo
 
-## Impacto Espera
-El análisis de estos datos busca:
-- Proveer un panorama claro sobre el comportamiento de la anemia en la región.
-- Ayudar en la formulación de planes de acción focalizados para reducir la incidencia en las poblaciones más afectadas.
-- Promover la concienciación y acción conjunta de las autoridades y la comunidad.
+El objetivo principal de este proyecto es proporcionar acceso al agua potable en las zonas más necesitadas, a través de un seguimiento detallado de las actividades realizadas, asegurando la cobertura y el impacto positivo en las comunidades beneficiadas.
 
----
+## Estructura del Dataset
 
-## Contenido del archivo CSV  
+El dataset contiene información detallada de las actividades realizadas en el marco del "Plan Cisterna". Cada registro está caracterizado por los siguientes campos:
 
-## Contenido del archivo CSV
+1. **Nombre de la EPS**: El nombre de la Empresa Prestadora de Servicios encargada de la distribución del agua potable.
+2. **Departamento**: El departamento en el que se realiza la actividad.
+3. **Provincia**: La provincia dentro del departamento.
+4. **Distrito**: El distrito donde se realiza la actividad.
+5. **Ubigeo**: Código único que identifica la ubicación geográfica específica.
+6. **Coordenada Este**: Coordenada geográfica este de la ubicación donde se realiza la distribución de agua.
+7. **Coordenada Norte**: Coordenada geográfica norte de la ubicación de la actividad.
+8. **Tipo de Servicio**: El tipo de servicio de agua potable proporcionado (por ejemplo, camión cisterna).
+9. **Zona**: La zona específica donde se realiza la actividad (por ejemplo, zona rural, zona urbana).
+10. **Cantidad de Distribución**: La cantidad de agua distribuida en litros.
+11. **Número de Viviendas Beneficiadas**: La cantidad de viviendas que se benefician de la actividad de distribución de agua.
+12. **Fecha de Corte**: Fecha en la que se hace un corte de las actividades realizadas.
+13. **Número de Registro**: Número único que identifica cada registro de actividad.
+14. **Año de Ejecución**: Año en el que se realiza la actividad.
+15. **Fecha de Registro**: Fecha en la que se registra la actividad en el sistema.
 
 |   FECHA_CORTE |   UUID |   ANIO_EJECUCION |   FECHA_REGISTRO | NOMBRE_EPS             | DEPARTAMENTO   | PROVINCIA        | DISTRITO             |   UBIGEO |   COORDENADA_ESTE |   COORDENADA_NORTE | TIPO_DE_SERVICIO   | ZONA                                                                                                                                                                                                                                                                                                                                 |   VOLUMEN_M3_DISTRIBUIDO |   CANTIDAD_DISTRIBUCION |   VIVIENDAS_BENEFICIADAS |
 |--------------:|-------:|-----------------:|-----------------:|:-----------------------|:---------------|:-----------------|:---------------------|---------:|------------------:|-------------------:|:-------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------:|------------------------:|-------------------------:|
