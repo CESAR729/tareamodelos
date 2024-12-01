@@ -1,68 +1,93 @@
 # Estrategia de Asistencia para Abastecimiento de Agua Potable - “Plan Cisterna”
 
-## Descripción del Proyecto
+## Descripción
 
-El **"Plan Cisterna"** es una iniciativa liderada por el [Organismo Técnico de la Administración de los servicios de Saneamiento – OTASS], en colaboración con las Empresas Prestadoras de Servicios (EPS), cuyo objetivo principal es garantizar el abastecimiento de agua potable en zonas críticas a través de la distribución mediante camiones cisterna. Esta estrategia forma parte de los esfuerzos de OTASS para promover el acceso al agua potable en comunidades vulnerables, priorizando la salud y el bienestar social.
+Este proyecto documenta la **Estrategia de Asistencia para Abastecimiento de Agua Potable - “Plan Cisterna”**, impulsada por el **Organismo Técnico de la Administración de los Servicios de Saneamiento (OTASS)**.  
+El objetivo principal es garantizar el acceso a agua potable en zonas críticas mediante la distribución con camiones cisterna, en coordinación con las **Empresas Prestadoras de Servicios (EPS)**.
 
-Este proyecto corresponde a la **primera etapa de la Estrategia de Asistencia para Abastecimiento de Agua Potable** y se centra en zonas críticas identificadas en diversos departamentos del país.
-
-## Características del Dataset
-
-El dataset asociado a este proyecto consolida información detallada de las actividades realizadas bajo el "Plan Cisterna". Los datos incluyen:
-
-- **Identificación de la actividad:**
-  - Nombre de la EPS.
-  - Ubicación geográfica (departamento, provincia, distrito).
-  - Código Ubigeo para la localización precisa.
-  - Coordenadas Este y Norte.
-
-- **Información operativa:**
-  - Tipo de servicio prestado.
-  - Zona donde se realiza la actividad.
-  - Cantidad de agua distribuida (en metros cúbicos).
-  - Número de viviendas beneficiadas por la actividad.
-
-- **Información temporal y administrativa:**
-  - Fecha de corte para la consolidación de datos.
-  - Número de registro único para cada actividad.
-  - Año de ejecución.
-  - Fecha de registro oficial.
-
-Este conjunto de datos proporciona una visión integral de los esfuerzos realizados en el marco del "Plan Cisterna" y permite un análisis detallado de su impacto.
-
-## Vista Previa del Dataset
-
-El dataset (`agua.csv`) incluye registros representativos de las actividades realizadas. A continuación, se muestra una vista previa:
-
-| Nombre de la EPS      | Departamento | Provincia | Distrito     | Ubigeo | Coordenada Este | Coordenada Norte | Tipo de Servicio  | Zona        | Cantidad Distribuida (m³) | Viviendas Beneficiadas | Fecha de Corte | Número de Registro | Año de Ejecución | Fecha de Registro |
-|-----------------------|--------------|-----------|--------------|--------|-----------------|------------------|-------------------|-------------|---------------------------|------------------------|----------------|--------------------|-------------------|-------------------|
-| EPS Sedapal           | Lima         | Lima      | Miraflores   | 150122 | -77.034         | -12.121          | Distribución Agua | Zona A      | 50.0                      | 25                     | 2023-01-15     | 001                | 2023              | 2023-01-16        |
-| EPS Cusco             | Cusco        | Cusco     | Wanchaq      | 080101 | -71.979         | -13.517          | Distribución Agua | Zona B      | 100.0                     | 50                     | 2023-02-10     | 002                | 2023              | 2023-02-11        |
-| EPS Arequipa          | Arequipa     | Arequipa  | Yanahuara    | 040120 | -71.536         | -16.399          | Distribución Agua | Zona C      | 70.0                      | 30                     | 2023-03-05     | 003                | 2023              | 2023-03-06        |
-
-> **Nota:** El contenido completo del dataset está disponible en el archivo `agua.csv`.
-
-## Objetivos del Proyecto
-
-1. **Distribución Eficiente:** Asegurar que el agua potable llegue a las zonas con mayor necesidad.
-2. **Monitoreo y Evaluación:** Proveer herramientas para analizar el impacto de las actividades realizadas.
-3. **Transparencia:** Facilitar la accesibilidad de los datos al público para fomentar la rendición de cuentas.
-
-## Cómo Usar Este Repositorio
-
-1. **Visualizar los Datos:** 
-   Abra el archivo `agua.csv` en su software de análisis preferido, como Excel, Python (pandas), o R.
-
-2. **Analizar el Impacto:** 
-   Utilice el dataset para identificar patrones, evaluar el impacto por región, y realizar comparaciones interanuales.
-
-3. **Contribuir:**
-   Si tiene sugerencias o mejoras para el proyecto, envíe sus comentarios a través de las herramientas de colaboración de este repositorio.
-
-## Créditos
-
-Este proyecto es desarrollado y gestionado por el [Organismo Técnico de la Administración de los servicios de Saneamiento – OTASS] en colaboración con las EPS del país.
+El dataset asociado, `agua.csv`, consolida las actividades realizadas durante la primera etapa de esta estrategia y permite analizar la distribución de recursos en diversas regiones.
 
 ---
 
-¡Gracias por su interés en el "Plan Cisterna"! Si tiene preguntas o desea contribuir, no dude en contactarnos.
+## Objetivo del Dataset
+
+El archivo `agua.csv` contiene información clave para:
+
+- **Monitorear y evaluar** la ejecución de las actividades de abastecimiento.
+- **Analizar la cobertura e impacto** en comunidades vulnerables.
+- **Optimizar los recursos** destinados a la distribución de agua potable.
+
+---
+
+## Contenido del Dataset
+
+El dataset incluye las siguientes variables:
+
+- **Datos Geográficos:**
+  - **Nombre de la EPS:** Empresa Prestadora de Servicios responsable.
+  - **Departamento, Provincia, Distrito:** Ubicación geográfica.
+  - **Ubigeo:** Código único de localización.
+  - **Coordenadas (Este y Norte):** Ubicación geoespacial.
+
+- **Datos Operativos:**
+  - **Tipo de Servicio:** Especifica el tipo de actividad realizada.
+  - **Zona:** Área de intervención.
+  - **Cantidad Distribuida (m³):** Volumen de agua entregado.
+  - **Viviendas Beneficiadas:** Número de hogares atendidos.
+
+- **Datos Temporales:**
+  - **Fecha de Corte:** Día en que se consolidó la información.
+  - **Año de Ejecución:** Periodo de la actividad.
+  - **Fecha de Registro:** Día en que se ingresaron los datos al sistema.
+
+---
+
+## Ejemplo de Uso
+
+El dataset `agua.csv` puede ser utilizado en:
+
+1. **Análisis Exploratorio de Datos (EDA):**  
+   - Identificar patrones en la distribución de agua por región o zona.  
+   - Evaluar tendencias de consumo y cobertura en diferentes periodos.
+
+2. **Análisis Geoespacial:**  
+   - Visualizar las zonas atendidas mediante mapas interactivos.  
+   - Optimizar rutas de distribución basadas en coordenadas geográficas.
+
+3. **Modelos Predictivos:**  
+   - Aplicar técnicas de machine learning para predecir necesidades futuras en función de los datos históricos.
+
+---
+
+## Estructura del Archivo `agua.csv`
+
+El archivo tiene una estructura tabular con las siguientes columnas:
+
+| Columna                 | Descripción                                        |
+|-------------------------|----------------------------------------------------|
+| Nombre de la EPS        | Empresa responsable de la distribución             |
+| Departamento            | Región administrativa                              |
+| Provincia               | Provincia donde se realiza la actividad           |
+| Distrito                | Distrito específico                               |
+| Ubigeo                  | Código único de localización                      |
+| Coordenada Este         | Coordenada geográfica (longitud)                  |
+| Coordenada Norte        | Coordenada geográfica (latitud)                   |
+| Tipo de Servicio        | Tipo de actividad realizada                       |
+| Zona                    | Zona intervenida                                  |
+| Cantidad Distribuida    | Volumen de agua entregado (en m³)                 |
+| Viviendas Beneficiadas  | Número de viviendas atendidas                     |
+| Fecha de Corte          | Día de consolidación de la información            |
+| Año de Ejecución        | Año en que se realizó la actividad                |
+| Fecha de Registro       | Día de ingreso de los datos al sistema            |
+
+---
+
+## Créditos
+
+Este proyecto es desarrollado por el **Organismo Técnico de la Administración de los Servicios de Saneamiento – OTASS**, en colaboración con las **Empresas Prestadoras de Servicios (EPS)** participantes.
+
+**Contacto:** Para consultas o información adicional, puede comunicarse con nosotros al correo [contacto@otass.gob.pe](mailto:contacto@otass.gob.pe).
+
+---
+
+**¡Gracias por explorar este proyecto y contribuir al análisis del impacto del “Plan Cisterna”!**
