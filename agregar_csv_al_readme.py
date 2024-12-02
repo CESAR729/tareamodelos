@@ -1,7 +1,8 @@
 import pandas as pd
+from tabulate import tabulate
 
-# Ruta al archivo CSV
-csv_file = 'Casos_Anemia_Region_Cusco_2010_2020_Cusco.csv'  # Asegúrate de que no haya espacios adicionales en el nombre
+# Ruta al archivo CSV (ajustada a la ubicación absoluta)
+csv_file = r"C:\Users\User\Documents\OtroDirectorio\Casos_Anemia_Region_Cusco_2010_2020_Cusco.csv"
 
 # Lee el archivo CSV
 try:
@@ -15,7 +16,6 @@ except pd.errors.ParserError as e:
 
 # Convierte el DataFrame a una tabla Markdown
 try:
-    from tabulate import tabulate
     markdown_table = tabulate(df, headers='keys', tablefmt='pipe', showindex=False)
 except ImportError:
     raise ImportError("Por favor instala la biblioteca 'tabulate' con: pip install tabulate")
