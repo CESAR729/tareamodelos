@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Especifica la ruta del archivo CSV
-csv_file = 'Casos_Anemia_Region_Cusco_2010_2020_Cusco.csv'
+csv_file = 'dataset-predial-parcona3.csv'
 
 # Intenta leer el archivo CSV con una codificación diferente
 try:
@@ -18,7 +18,7 @@ try:
 
     # Agrega la tabla al README.md
     with open('README.md', 'a', encoding='utf-8') as f:  # 'a' agrega al final del archivo
-        f.write("\n## Casos de Anemia en la Región Cusco (2010-2020)\n\n")  # Título descriptivo
+        f.write("\n## Información del Dataset Predial Parcona3\n\n")  # Título descriptivo
         f.write(markdown_table + "\n")
     print("Contenido del archivo CSV agregado al README.md")
 except ImportError:
