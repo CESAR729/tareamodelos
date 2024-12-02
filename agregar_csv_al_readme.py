@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Ruta del archivo CSV
-csv_file = 'Casos_Anemia_Region_Cusco_2010_2020_Cusco .csv'  # Cambia por la ruta correcta de tu archivo CSV
+csv_file = 'Casos_Anemia_Region_Cusco_2010_2020_Cusco .csv ';''  # Cambia por la ruta correcta de tu archivo CSV
 
 # Intentamos leer el archivo con una codificación diferente
 try:
